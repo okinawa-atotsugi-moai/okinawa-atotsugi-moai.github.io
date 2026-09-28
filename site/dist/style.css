@@ -78,3 +78,13 @@ header{padding:15px 4.5%;border-bottom:2px solid var(--ink);background:white}
 .media-caption{display:flex;align-items:center;flex-wrap:wrap;gap:8px 18px}.media-caption p{font-size:.86rem;margin:0;line-height:1.7}
 .collage-message .moai-theme{font-size:clamp(1.35rem,2.6vw,1.75rem);color:var(--red);letter-spacing:.08em;line-height:1.5;margin:0 0 14px}
 @media(max-width:650px){.media-caption{display:block}.media-caption p{font-size:.78rem;margin-top:6px}.media .chapter-heading{align-items:center;gap:18px}.media .chapter-note{display:inline-block}.join-intro .chapter-heading{column-gap:12px}.collage-message .moai-theme{font-size:1.4rem}.challenge .chapter-heading h2{font-size:.78rem}.collage-message .collage-closing{font-size:.94rem}}
+
+/* Distinct, quiet backgrounds make each chapter easy to recognize. */
+.about-collage{max-width:none;background:#fff8e7}
+.journal{background:#e4eeea}
+.media{background:#fffdf7}
+.resources{background:#ece6d9}
+.join{background:#e4eeea}
+.supporters{background:#fffdf7}
+.journal,.media,.resources,.join{border-top:1px solid #25252526}
+@media(min-width:1200px){.about-collage{padding-left:calc((100% - 600px)/2);padding-right:calc((100% - 600px)/2)}.memory-one{left:calc(50% - 520px)}.memory-two{right:calc(50% - 520px)}.memory-three{left:calc(50% - 490px)}.memory-four{right:calc(50% - 490px)}}
