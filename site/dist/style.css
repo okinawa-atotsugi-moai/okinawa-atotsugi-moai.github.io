@@ -71,3 +71,10 @@ header{padding:15px 4.5%;border-bottom:2px solid var(--ink);background:white}
 
 .event-strip h2.chapter-note br{display:initial}
 @media(max-width:650px){.about-collage{padding-top:180px}.event-strip .chapter-heading h2.chapter-note{font-size:.76rem}}
+
+/* Keep annotated phrases together; wrap the heading group on narrow screens. */
+#resources .chapter-heading h2,#join .chapter-heading h2,.challenge .chapter-heading h2,#about-title{white-space:nowrap}
+#resources .chapter-heading,.challenge>.chapter-heading,.join-intro .chapter-heading{flex-wrap:wrap;row-gap:5px}
+.media-caption{display:flex;align-items:center;flex-wrap:wrap;gap:8px 18px}.media-caption p{font-size:.86rem;margin:0;line-height:1.7}
+.collage-message .moai-theme{font-size:clamp(1.35rem,2.6vw,1.75rem);color:var(--red);letter-spacing:.08em;line-height:1.5;margin:0 0 14px}
+@media(max-width:650px){.media-caption{display:block}.media-caption p{font-size:.78rem;margin-top:6px}.media .chapter-heading{align-items:center;gap:18px}.media .chapter-note{display:inline-block}.join-intro .chapter-heading{column-gap:12px}.collage-message .moai-theme{font-size:1.4rem}.challenge .chapter-heading h2{font-size:.78rem}.collage-message .collage-closing{font-size:.94rem}}
