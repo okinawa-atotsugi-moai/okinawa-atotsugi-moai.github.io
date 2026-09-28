@@ -220,3 +220,13 @@ header{padding:15px 4.5%;border-bottom:2px solid var(--ink);background:white}
 
 /* Enlarge the right-aligned photo while preserving button size and bottom alignment. */
 @media(min-width:500px){.challenge-actions .challenge-photo{flex:0 1 210px;width:210px;max-width:210px}}
+
+/* Let the photo share the text rows rather than adding height above the button. */
+@media(min-width:500px){
+.challenge .challenge-body{display:grid;grid-template-columns:minmax(0,1fr) 210px;column-gap:24px;row-gap:10px;align-items:end}
+.challenge-body>p{grid-column:1;grid-row:1;margin:0}
+.challenge-actions{display:contents}
+.challenge-actions .button{grid-column:1;grid-row:2;justify-self:start;margin:0}
+.challenge-actions .challenge-photo{grid-column:2;grid-row:1/3;align-self:end;justify-self:end;width:210px;margin:0}
+}
+@media(max-width:499px){.challenge-actions{margin-top:6px}.challenge-body>p{margin-bottom:8px}}
