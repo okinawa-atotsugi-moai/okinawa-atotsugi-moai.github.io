@@ -110,3 +110,20 @@ header{padding:15px 4.5%;border-bottom:2px solid var(--ink);background:white}
 .about-collage{padding-top:210px;padding-bottom:175px}.memory{height:auto;object-fit:contain;max-height:none}.memory-one{top:110px}.memory-two{top:98px}.memory-three{bottom:35px}.memory-four{bottom:30px}
 @media(max-width:650px){.about-collage .collage-label{font-size:2rem;left:5%;top:28px}.about-collage{padding-top:205px;padding-bottom:155px}.memory{width:39%;height:auto;max-width:none}.memory-one{top:93px;left:5%}.memory-two{top:88px;right:5%}.memory-three{bottom:35px;left:5%}.memory-four{bottom:23px;right:5%}}
 @media(max-width:650px){.about-collage{padding-top:250px}}
+
+/* Flow-based About layout: photos and copy always occupy separate grid cells. */
+.about-collage{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px 6%;padding:44px max(5%,calc((100% - 1100px)/2)) 0;align-items:center}
+.about-collage .collage-label{position:static;grid-column:1/-1;margin:0;transform:none}
+.about-collage .memory{position:static;width:100%;max-width:240px;height:auto;max-height:none;object-fit:contain;justify-self:center;transform:none;margin:0}
+.about-collage .memory-one{grid-column:1;grid-row:2;transform:rotate(-3deg)}
+.about-collage .memory-two{grid-column:1;grid-row:3;max-width:180px;transform:rotate(3deg)}
+.about-collage .collage-message{grid-column:2;grid-row:2/4;min-width:0}
+.about-collage .speakers-cutout{grid-column:1/-1;width:min(100%,560px);height:auto;display:block;justify-self:center;margin:0}
+@media(max-width:700px){
+.about-collage{gap:26px 20px;padding:32px 6% 0}
+.about-collage .memory-one{grid-column:1;grid-row:2}
+.about-collage .memory-two{grid-column:2;grid-row:2;max-width:145px}
+.about-collage .collage-message{grid-column:1/-1;grid-row:3}
+.about-collage #about-title{font-size:clamp(16px,4.4vw,24px)}
+.about-collage .speakers-cutout{width:min(100%,460px)}
+}
