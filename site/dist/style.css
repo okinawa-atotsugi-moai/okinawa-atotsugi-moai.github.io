@@ -184,3 +184,8 @@ header{padding:15px 4.5%;border-bottom:2px solid var(--ink);background:white}
 .join .contact-address a:hover{color:#171a17}.join .contact-address a:focus-visible{outline:3px solid #a63b22;outline-offset:5px}
 .join .contact-address small{font-size:.78rem;line-height:1.7;color:#555}
 @media(max-width:650px){.join .contact-address{padding:18px 16px;gap:10px}.join .contact-address a{font-size:clamp(.9rem,3.8vw,1.2rem)}}
+
+/* Keep the media label and its introduction in one heading. */
+.media-caption .media-description{font-size:.95rem;font-weight:400;letter-spacing:normal;line-height:1.85}
+.media-caption h2.chapter-note{white-space:normal}
+@media(max-width:650px){.media-caption .media-description{font-size:.87rem}}
