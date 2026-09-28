@@ -33,3 +33,16 @@ header{padding:15px 4.5%;border-bottom:2px solid var(--ink);background:white}
 .hero-photo .photo-track img:first-child{filter:brightness(1.30) contrast(.92)}
 .hero-photo{padding-bottom:0}.hero-photo .photo-controls{bottom:44px}
 @media(max-width:650px){.section-title{font-size:3.2rem}.section-heading .section-title+h2{font-size:1.35rem}.hero-photo .photo-controls{bottom:42px}.section-heading{margin-bottom:25px}}
+
+/* Compact chapters: preserve copy while reducing repeated vertical gaps. */
+.section-title{font-size:clamp(2rem,3.5vw,3rem);margin-bottom:8px}
+.section-heading .section-title{margin-bottom:8px}
+.section{padding-top:40px;padding-bottom:40px}
+.about{grid-template-columns:1fr 1.6fr;gap:30px}.about-body{max-width:760px}
+.about-body>p{margin-bottom:12px}.about-body>p:not(.lead){line-height:1.8}
+.about .lead{font-size:1.15rem;line-height:1.65}.about h2 br,.about .lead br{display:none}
+.join-intro{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:16px}
+.join-intro h2{margin-bottom:0}.team{width:132px;flex:0 0 132px;margin:0}
+.team img{mix-blend-mode:multiply;aspect-ratio:1;object-fit:contain}
+.team figcaption{display:block;text-align:center;font-size:.7rem;margin-top:3px;line-height:1.4}
+@media(max-width:650px){.section-title{font-size:2rem}.section{padding-top:30px;padding-bottom:30px}.about{grid-template-columns:1fr;gap:15px}.about .lead{font-size:1.1rem}.about-body>p{margin-bottom:10px}.section-heading{margin-bottom:20px}.join{gap:24px}.team{width:106px;flex-basis:106px}.join-intro{gap:10px}.join-intro h2{font-size:1.25rem}.join-intro .section-title{margin-bottom:8px}}
