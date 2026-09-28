@@ -4,9 +4,8 @@ if (photoTrack) {
   const controls = document.querySelector('.photo-controls');
   const photos = [...photoTrack.querySelectorAll('img')];
   const count = controls.querySelector('.photo-count');
-  const captions = ['第1回 / 2026.05.22　仲間と出会う。', '第2回 / 2026.08.14　上間喜壽さんから学ぶ。', '第1回 / 2026.05.22　本音で語り合う。', '第2回 / 2026.08.14　学びを持ち寄り、次の一歩へ。', '第1回 / 2026.05.22　家業のこれからを考える。'];
+  const captions = ['第1回 / 2026.05.22　仲間と出会う。', '第2回 / 2026.08.14　上間喜壽さんから学ぶ。', '第1回 / 2026.05.22　本音で語り合う。', '第1回 / 2026.05.22　家業のこれからを考える。'];
   const caption = document.querySelector('.slide-caption');
-  const source = document.querySelector('.photo-source');
   const current = () => Math.round(photoTrack.scrollLeft / photoTrack.clientWidth);
   const move = delta => {
     const next = (current() + delta + photos.length) % photos.length;
@@ -21,7 +20,6 @@ if (photoTrack) {
   photoTrack.addEventListener('scroll', () => {
     count.textContent = `${String(current() + 1).padStart(2, '0')} / ${String(photos.length).padStart(2, '0')}`;
     caption.textContent = captions[current()] || '';
-    source.hidden = ![1, 3].includes(current());
   }, {passive: true});
 }
 const articles = document.querySelector('#articles');
