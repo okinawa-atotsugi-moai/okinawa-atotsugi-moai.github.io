@@ -197,3 +197,14 @@ header{padding:15px 4.5%;border-bottom:2px solid var(--ink);background:white}
 .challenge-photo{margin:12px 8px;width:calc(100% - 16px);transform:rotate(4deg)}
 .challenge-photo img{display:block;width:100%;height:auto;filter:drop-shadow(3px 5px 0 rgba(80,25,10,.15))}
 @media(max-width:800px){.challenge-layout{grid-template-columns:1fr;gap:20px}.challenge-photo{width:min(78%,330px);justify-self:end;margin:8px 8px 0}.challenge-layout .challenge-body p{line-height:1.9}}
+
+/* Compact photo beside the challenge link, without a separate image row. */
+.challenge-actions{display:flex;align-items:center;gap:24px;margin-top:18px}
+.challenge-actions .button{flex:none;margin:0}
+.challenge-actions .challenge-photo{flex:none;width:155px;margin:0 6px;transform:rotate(4deg)}
+@media(max-width:650px){.challenge-actions{gap:12px}.challenge-actions .button{padding:14px 12px;font-size:.85rem}.challenge-actions .challenge-photo{width:88px;margin:0 3px}}
+
+/* Straight photo, slightly narrower than the button, aligned at the bottom. */
+.challenge-actions{align-items:flex-end;gap:20px}
+.challenge-actions .challenge-photo{width:210px;transform:none;margin:0}
+@media(max-width:650px){.challenge-actions{gap:12px}.challenge-actions .button{flex:1;min-width:0;padding:14px 10px;text-align:center;font-size:.8rem}.challenge-actions .challenge-photo{width:43%;margin:0;transform:none}}
