@@ -58,3 +58,16 @@ header{padding:15px 4.5%;border-bottom:2px solid var(--ink);background:white}
 .join-intro{gap:14px}.join-intro .chapter-heading{gap:18px;align-self:center}.join-intro .section-title{margin:0}.join-intro h2.chapter-note{font-size:.9rem}.join .team{width:96px;flex-basis:96px}
 .contact-guide{font-size:.95rem;margin:18px 0 7px}.contact-address{font-size:1rem;margin:0}.contact-address a{text-decoration:underline;text-underline-offset:5px;overflow-wrap:anywhere}
 @media(max-width:650px){.chapter-heading,.challenge>.chapter-heading{gap:20px}.chapter-heading h2.chapter-note{font-size:.83rem;padding-left:5px}.chapter-note:before{width:32px}.chapter-note:after{width:45px}.about{grid-template-columns:1fr}.join-intro .chapter-heading{gap:12px}.join-intro .section-title{font-size:1.8rem}.join-intro h2.chapter-note{font-size:.72rem}.join .team{width:76px;flex-basis:76px}.join-intro{gap:8px}.contact-address{font-size:.94rem}}
+
+/* A compact photo collage, with the community's message at its heart. */
+.event-strip .section-title{white-space:nowrap}
+.about-collage{position:relative;max-width:1200px;margin:auto;padding:170px 25% 150px;isolation:isolate;background:radial-gradient(ellipse at 20% 0%,#f8f3dd88,transparent 65%)}
+.collage-label{position:absolute;top:42px;left:36%;font:italic 2.5rem Georgia,serif;transform:rotate(-7deg);margin:0;z-index:2}
+.collage-message{text-align:center;position:relative;z-index:2}.collage-message h2{font-size:1.5rem;margin-bottom:18px;letter-spacing:.015em}.collage-message p{font-weight:700;line-height:2.25;font-size:1.1rem;margin-bottom:12px}.collage-message .collage-closing{margin-bottom:18px}.collage-message .text-link{font-size:.8rem}
+.memory{position:absolute;width:20%;max-width:220px;height:155px;object-fit:cover;filter:brightness(1.18) contrast(.96);z-index:1}
+.memory-one{top:54px;left:6%;transform:rotate(-5deg)}.memory-two{top:34px;right:7%;transform:rotate(5deg);height:180px;object-position:center 65%}
+.memory-three{bottom:50px;left:8%;transform:rotate(4deg)}.memory-four{bottom:30px;right:8%;transform:rotate(-6deg)}
+@media(max-width:650px){.event-strip .chapter-heading{gap:15px}.event-strip .section-title{font-size:1.85rem}.event-strip .chapter-note{min-width:0}.about-collage{padding:165px 5% 155px}.collage-label{font-size:1.8rem;top:21px;left:8%}.memory{width:31%;height:100px}.memory-one{top:69px;left:5%}.memory-two{top:28px;right:6%;height:117px}.memory-three{bottom:28px;left:9%}.memory-four{bottom:20px;right:7%}.collage-message h2{font-size:1.25rem;margin-bottom:12px}.collage-message p{font-size:.97rem;line-height:2}.collage-message .collage-closing{margin-bottom:14px}}
+
+.event-strip h2.chapter-note br{display:initial}
+@media(max-width:650px){.about-collage{padding-top:180px}.event-strip .chapter-heading h2.chapter-note{font-size:.76rem}}
