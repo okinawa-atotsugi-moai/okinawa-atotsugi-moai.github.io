@@ -189,3 +189,11 @@ header{padding:15px 4.5%;border-bottom:2px solid var(--ink);background:white}
 .media-caption .media-description{font-size:.95rem;font-weight:400;letter-spacing:normal;line-height:1.85}
 .media-caption h2.chapter-note{white-space:normal}
 @media(max-width:650px){.media-caption .media-description{font-size:.87rem}}
+
+/* A photographic cutout beside the challenge message. */
+.challenge-layout{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:32px;align-items:center}
+.challenge-layout .challenge-body{display:block}
+.challenge-layout .challenge-body .button{margin-top:16px}
+.challenge-photo{margin:12px 8px;width:calc(100% - 16px);transform:rotate(4deg)}
+.challenge-photo img{display:block;width:100%;height:auto;filter:drop-shadow(3px 5px 0 rgba(80,25,10,.15))}
+@media(max-width:800px){.challenge-layout{grid-template-columns:1fr;gap:20px}.challenge-photo{width:min(78%,330px);justify-self:end;margin:8px 8px 0}.challenge-layout .challenge-body p{line-height:1.9}}
