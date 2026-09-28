@@ -104,3 +104,9 @@ header{padding:15px 4.5%;border-bottom:2px solid var(--ink);background:white}
 .media-caption{display:flex;flex-direction:column;align-items:flex-start;gap:16px;min-width:0}.media-caption h2.chapter-note{display:inline-block;padding-top:17px;padding-bottom:17px;line-height:1.8}.media-caption p{font-size:.95rem;line-height:1.85;margin:0;padding-left:8px}
 .media-item{padding-top:28px;padding-bottom:28px}.media-item h3{line-height:1.75}.media-item p{line-height:1.9;margin-top:12px;margin-bottom:20px}
 @media(max-width:650px){.media .chapter-heading{gap:22px}.media-caption{gap:17px}.media-caption p{font-size:.87rem;padding-left:5px}.media .section-heading{margin-bottom:26px}.media-item{gap:16px;padding:24px 0}.media-item h3{font-size:1.15rem}}
+
+/* Match chapter typography and preserve complete photo frames. */
+.about-collage .collage-label{font-family:Georgia,"Times New Roman",serif;font-style:normal;font-weight:700;font-size:clamp(2rem,3.5vw,3rem);line-height:1.08;letter-spacing:.015em;transform:none;left:8%;top:35px}
+.about-collage{padding-top:210px;padding-bottom:175px}.memory{height:auto;object-fit:contain;max-height:none}.memory-one{top:110px}.memory-two{top:98px}.memory-three{bottom:35px}.memory-four{bottom:30px}
+@media(max-width:650px){.about-collage .collage-label{font-size:2rem;left:5%;top:28px}.about-collage{padding-top:205px;padding-bottom:155px}.memory{width:39%;height:auto;max-width:none}.memory-one{top:93px;left:5%}.memory-two{top:88px;right:5%}.memory-three{bottom:35px;left:5%}.memory-four{bottom:23px;right:5%}}
+@media(max-width:650px){.about-collage{padding-top:250px}}
