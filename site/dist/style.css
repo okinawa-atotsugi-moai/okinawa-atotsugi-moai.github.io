@@ -148,3 +148,16 @@ header{padding:15px 4.5%;border-bottom:2px solid var(--ink);background:white}
 }
 
 .about-scene{position:relative;aspect-ratio:1.65;overflow:hidden;margin:0}.about-scene img{position:absolute;bottom:0;left:0;width:100%;height:auto}
+
+/* A deliberately uneven portrait collage; copy keeps its own grid area. */
+.about-collage{grid-template-rows:auto auto auto;row-gap:16px}
+.about-collage .speaker-1{width:155px;justify-self:end;align-self:start;transform:rotate(-7deg);margin-top:12px}
+.about-collage .speaker-2{width:115px;justify-self:end;align-self:center;transform:rotate(6deg);margin-top:68px}
+.about-collage .speaker-3{grid-column:1;grid-row:3;width:108px;justify-self:start;align-self:end;transform:rotate(5deg);margin-top:0}
+@media(max-width:800px){
+.about-collage{column-gap:32px;row-gap:14px}
+.about-collage .speaker-1{grid-column:1;grid-row:2;width:110px;justify-self:start;margin:0 0 0 12px;transform:rotate(-8deg)}
+.about-collage .speaker-2{grid-column:2;grid-row:2;width:83px;justify-self:end;margin:42px 14px 0 0;transform:rotate(7deg)}
+.about-collage .speaker-3{grid-column:1/-1;grid-row:4;width:100px;justify-self:end;margin:0 18% 0 0;transform:rotate(-5deg)}
+.about-collage .collage-message{padding:12px 0}
+}
