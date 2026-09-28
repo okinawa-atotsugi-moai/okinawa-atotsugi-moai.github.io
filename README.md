@@ -2,6 +2,16 @@
 
 軽量なHTML/CSS/JavaScriptで構成。利用者にAI契約は不要です。
 
+公開先: https://okinawa-atotsugi-moai.github.io/
+
+## 日々の運用
+
+- 活動レポートは、これまでどおり公式noteに投稿します。公開設定完了後は6時間ごとの処理で最新記事を取り込み、トップに3件表示します。反映には数時間かかることがあります。
+- すぐに反映したいときは、GitHubのActions → Publish Moai website → Run workflowを実行します。
+- 更新結果はActionsの緑のチェックで確認できます。赤い失敗表示の場合は処理のログを確認してください。
+- GitHubの定期処理が長期未更新で停止した場合は、同じActions画面で再度有効にしてください。
+- 最初の集合写真はCSSで明るさを調整しています。元画像は変更していません。
+
 ## 初稿を見る
 
 Python 3がある場合、リポジトリのルートで `python -m http.server 4173 --directory site/dist --bind 127.0.0.1` を実行し、http://127.0.0.1:4173/ を開きます。インストールなしでは `site/dist/index.html` をブラウザーで開くこともできます。
