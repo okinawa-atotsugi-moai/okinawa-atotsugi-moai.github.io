@@ -219,4 +219,4 @@ header{padding:15px 4.5%;border-bottom:2px solid var(--ink);background:white}
 .challenge-actions{width:100%;justify-content:space-between}
 
 /* Enlarge the right-aligned photo while preserving button size and bottom alignment. */
-@media(min-width:651px){.challenge-actions .challenge-photo{flex:0 1 210px;width:210px;max-width:210px}}
+@media(min-width:500px){.challenge-actions .challenge-photo{flex:0 1 210px;width:210px;max-width:210px}}
