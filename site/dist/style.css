@@ -127,3 +127,24 @@ header{padding:15px 4.5%;border-bottom:2px solid var(--ink);background:white}
 .about-collage #about-title{font-size:clamp(16px,4.4vw,24px)}
 .about-collage .speakers-cutout{width:min(100%,460px)}
 }
+
+/* Individual cutouts surround the message in separate, non-overlapping cells. */
+.about-collage{grid-template-columns:minmax(100px,1fr) minmax(300px,440px) minmax(100px,1fr);gap:24px 32px;padding-bottom:36px}
+.about-collage .collage-message{grid-column:2;grid-row:2/4}
+.about-speaker{position:relative;width:140px;max-width:100%;aspect-ratio:1/2;overflow:hidden;margin:0;justify-self:center}
+.about-speaker img{position:absolute;top:0;width:300%;max-width:none;height:auto}
+.speaker-1{grid-column:1;grid-row:2;justify-self:start}.speaker-1 img{left:0}
+.speaker-2{grid-column:3;grid-row:2;justify-self:end;transform:translateY(28px)}.speaker-2 img{left:-100%}
+.speaker-3{grid-column:3;grid-row:3;width:115px;justify-self:start}.speaker-3 img{left:-200%}
+.about-scene{grid-column:1;grid-row:3;width:100%;max-width:220px;height:auto;justify-self:center}
+@media(max-width:800px){
+.about-collage{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px 24px;padding-bottom:28px}
+.about-collage .collage-message{grid-column:1/-1;grid-row:3}
+.about-speaker{width:100px}
+.speaker-1{grid-column:1;grid-row:2;justify-self:center}
+.speaker-2{grid-column:2;grid-row:2;justify-self:center;transform:none}
+.speaker-3{grid-column:2;grid-row:4;width:95px;justify-self:center}
+.about-scene{grid-column:1;grid-row:4;max-width:185px}
+}
+
+.about-scene{position:relative;aspect-ratio:1.65;overflow:hidden;margin:0}.about-scene img{position:absolute;bottom:0;left:0;width:100%;height:auto}
