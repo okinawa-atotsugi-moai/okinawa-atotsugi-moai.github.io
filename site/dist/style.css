@@ -213,3 +213,7 @@ header{padding:15px 4.5%;border-bottom:2px solid var(--ink);background:white}
 .challenge-actions .button{flex:0 0 auto;font-size:1rem;padding:15px 24px;white-space:nowrap}
 .challenge-actions .challenge-photo{flex:0 1 150px;width:150px;min-width:0;max-width:150px;margin:0;transform:none}
 @media(max-width:650px){.challenge-actions{gap:12px}.challenge-actions .button{font-size:1rem;padding:15px 24px;flex:0 0 auto}.challenge-actions .challenge-photo{flex:1 1 150px;width:auto;min-width:0}}
+
+/* Use the section width and place the photo at the right edge. */
+.challenge .challenge-body{max-width:none;width:100%}
+.challenge-actions{width:100%;justify-content:space-between}
