@@ -317,3 +317,25 @@ header{padding:15px 4.5%;border-bottom:2px solid var(--ink);background:white}
 .about-woman{grid-column:1;grid-row:3;width:130px;margin:0 0 60px;justify-self:end;align-self:start;transform:rotate(3deg)}
 .about-woman img{display:block;width:100%;height:auto}
 @media(max-width:800px){.about-woman{grid-column:1/3;grid-row:5;width:100px;margin:-20px 0 0;justify-self:center}.about-attendees{grid-row:4/6;align-self:center}.about-collage .speaker-3{align-self:start}}
+/* Each portrait owns a grid cell; no negative margins or shared portrait cells. */
+.about-collage{row-gap:16px}
+.about-attendees{display:contents}
+.about-collage .collage-message{grid-row:2/5}
+.about-collage .speaker-1{grid-column:1;grid-row:2}
+.about-collage .speaker-2{grid-column:3;grid-row:2}
+.about-collage .speaker-3{grid-column:1;grid-row:4;align-self:center;margin:0}
+.about-collage .about-woman{grid-column:1;grid-row:3;margin:0;width:130px;align-self:center}
+.about-attendees .attendee{width:150px;max-width:100%;margin:0;align-self:center}
+.about-attendees .attendee-one{grid-column:3;grid-row:3;justify-self:start}
+.about-attendees .attendee-two{grid-column:3;grid-row:4;justify-self:end;margin:0}
+@media(max-width:800px){
+.about-collage .collage-message{grid-column:1/-1;grid-row:3}
+.about-collage .speaker-1{grid-column:1/4;grid-row:2}
+.about-collage .speaker-2{grid-column:4/7;grid-row:2}
+.about-collage .speaker-3{grid-column:1/4;grid-row:4;justify-self:start;margin-left:20px}
+.about-collage .about-woman{grid-column:1/4;grid-row:5;width:100px;justify-self:end}
+.about-attendees .attendee{width:125px;max-width:90%}
+.about-attendees .attendee-one{grid-column:4/7;grid-row:4;justify-self:end}
+.about-attendees .attendee-two{grid-column:4/7;grid-row:5;justify-self:start}
+}
+@media(max-width:800px){.about-collage .about-woman{justify-self:start;margin-left:8px}.about-attendees .attendee-two{justify-self:end}}
