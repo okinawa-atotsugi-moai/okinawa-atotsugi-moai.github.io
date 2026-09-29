@@ -339,3 +339,25 @@ header{padding:15px 4.5%;border-bottom:2px solid var(--ink);background:white}
 .about-attendees .attendee-two{grid-column:4/7;grid-row:5;justify-self:start}
 }
 @media(max-width:800px){.about-collage .about-woman{justify-self:start;margin-left:8px}.about-attendees .attendee-two{justify-self:end}}
+
+/* Desktop: mirror the outer / inner / outer rhythm around the message. */
+@media(min-width:801px){
+  .about-collage .speaker-1{justify-self:start}
+  .about-collage .about-woman{justify-self:end}
+  .about-collage .speaker-3{justify-self:start}
+  .about-collage .speaker-2{justify-self:end}
+  .about-attendees .attendee-one{justify-self:start}
+  .about-attendees .attendee-two{justify-self:end}
+}
+
+/* Keep wide desktop screens readable while backgrounds remain full width. */
+@media(min-width:1001px){
+  body>header,.hero,.event-strip,footer{
+    padding-left:max(5%,calc((100% - 1200px)/2));
+    padding-right:max(5%,calc((100% - 1200px)/2));
+  }
+  .section{
+    padding-left:max(8%,calc((100% - 1100px)/2));
+    padding-right:max(8%,calc((100% - 1100px)/2));
+  }
+}
