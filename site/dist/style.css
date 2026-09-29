@@ -340,6 +340,22 @@ header{padding:15px 4.5%;border-bottom:2px solid var(--ink);background:white}
 }
 @media(max-width:800px){.about-collage .about-woman{justify-self:start;margin-left:8px}.about-attendees .attendee-two{justify-self:end}}
 
+/* Reduce the collage height without shrinking its message or changing the rhythm. */
+.about-collage{padding-top:24px;padding-bottom:24px;row-gap:14px}
+.about-collage .speaker-1{width:85px}
+.about-collage .speaker-2{width:70px;margin-top:0}
+.about-collage .speaker-3{width:65px}
+.about-collage .about-woman{width:105px}
+.about-attendees .attendee{width:120px}
+@media(max-width:800px){
+  .about-collage{padding-top:22px;padding-bottom:22px;row-gap:12px}
+  .about-collage .speaker-1{width:60px}
+  .about-collage .speaker-2{width:55px}
+  .about-collage .speaker-3{width:55px}
+  .about-collage .about-woman{width:80px}
+  .about-attendees .attendee{width:95px}
+}
+
 /* Desktop: mirror the outer / inner / outer rhythm around the message. */
 @media(min-width:801px){
   .about-collage .speaker-1{justify-self:start}
