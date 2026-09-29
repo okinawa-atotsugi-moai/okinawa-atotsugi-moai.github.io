@@ -287,3 +287,17 @@ header{padding:15px 4.5%;border-bottom:2px solid var(--ink);background:white}
 .about-attendees{padding:0;margin-left:12px;justify-content:space-around}
 .attendee{max-width:65px}.attendee-two{margin-top:14px}
 }
+
+/* Bring the new portraits to the same visual scale as the surrounding speakers. */
+.about-attendees{gap:18px;justify-content:space-between;align-items:flex-end}
+.about-attendees .attendee{flex:0 1 120px;max-width:120px;aspect-ratio:3/4}
+.about-attendees .attendee-one{transform:rotate(-5deg);margin-bottom:12px}
+.about-attendees .attendee-two{transform:rotate(5deg) scaleX(-1);margin-top:24px}
+@media(max-width:800px){.about-attendees{gap:12px;margin-left:6px}.about-attendees .attendee{flex:0 1 90px;max-width:90px}.about-attendees .attendee-one{margin-bottom:8px}.about-attendees .attendee-two{margin-top:12px}}
+
+/* Bring the new portraits up to the other speakers' scale. */
+.about-attendees{gap:18px;justify-content:space-between}
+.about-attendees .attendee{max-width:125px;aspect-ratio:3/4}
+.about-attendees .attendee-one{transform:rotate(-4deg);margin-top:0}
+.about-attendees .attendee-two{transform:rotate(5deg);margin-top:26px}
+@media(max-width:800px){.about-attendees{gap:12px;margin-left:0}.about-attendees .attendee{max-width:100px}.about-attendees .attendee-two{margin-top:20px}}
