@@ -301,3 +301,19 @@ header{padding:15px 4.5%;border-bottom:2px solid var(--ink);background:white}
 .about-attendees .attendee-one{transform:rotate(-4deg);margin-top:0}
 .about-attendees .attendee-two{transform:rotate(5deg);margin-top:26px}
 @media(max-width:800px){.about-attendees{gap:12px;margin-left:0}.about-attendees .attendee{max-width:100px}.about-attendees .attendee-two{margin-top:20px}}
+/* Keep each portrait large even when the side column is narrow. */
+.about-attendees{display:grid;grid-template-columns:1fr;gap:0;justify-items:start;align-self:start}
+.about-attendees .attendee{width:150px;max-width:100%;aspect-ratio:3/4;margin:0}
+.about-attendees .attendee-two{justify-self:end;margin-top:-48px}
+@media(max-width:800px){
+.about-attendees{display:flex;gap:8px;align-items:flex-end}
+.about-attendees .attendee{flex:1 1 0;width:auto;max-width:none;min-width:0}
+.about-attendees .attendee-two{margin-top:20px;margin-bottom:0}
+}
+@media(min-width:801px){
+.about-collage{grid-template-columns:minmax(110px,1fr) minmax(260px,440px) minmax(150px,1fr);column-gap:20px}
+.about-attendees .attendee-two{margin-top:-90px}
+}
+.about-woman{grid-column:1;grid-row:3;width:130px;margin:0 0 60px;justify-self:end;align-self:start;transform:rotate(3deg)}
+.about-woman img{display:block;width:100%;height:auto}
+@media(max-width:800px){.about-woman{grid-column:1/3;grid-row:5;width:100px;margin:-20px 0 0;justify-self:center}.about-attendees{grid-row:4/6;align-self:center}.about-collage .speaker-3{align-self:start}}
