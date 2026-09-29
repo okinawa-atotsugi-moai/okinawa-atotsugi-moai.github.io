@@ -361,3 +361,21 @@ header{padding:15px 4.5%;border-bottom:2px solid var(--ink);background:white}
     padding-right:max(8%,calc((100% - 1100px)/2));
   }
 }
+
+/* On desktop, the photo shares the heading, copy and action's full height. */
+@media(min-width:1001px){
+  .challenge{
+    display:grid;
+    grid-template-columns:minmax(0,1fr) clamp(240px,25vw,320px);
+    gap:16px 48px;
+    align-items:center;
+  }
+  .challenge>.chapter-heading{grid-column:1;grid-row:1;margin:0}
+  .challenge .challenge-body,.challenge .challenge-actions{display:contents}
+  .challenge .challenge-body>p{grid-column:1;grid-row:2;margin:0}
+  .challenge .challenge-actions .button{grid-column:1;grid-row:3;justify-self:start;margin:0}
+  .challenge .challenge-actions .challenge-photo{
+    grid-column:2;grid-row:1/4;align-self:center;justify-self:center;
+    width:100%;max-width:320px;margin:0;
+  }
+}
